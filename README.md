@@ -16,7 +16,7 @@ Definitions
 
 - Dictionary: pieces arranged in a circle. Pieces are taken from here, shrinking the circle.
 - Board: the play area which is initially empty, where players place sequences of pieces connected orthogonally
-- Word: a connected row or column of at least 2 pieces of any colour on the board, bounded on both sides by an empty space
+- Word: a connected row or column of at least 2 pieces of any colour on the board, bounded at both ends by an empty space
 - Valid word: a word which can be matched to a sequence of adjacent pieces in the dictionary at the moment of play. Both the colour and size of every piece must match. Direction doesn’t matter. For the purpose of matching, the dictionary is considered an infinite loop.
 - Hand: a set of 3 pieces from which a player can play words on the board. Hands are public information.
 

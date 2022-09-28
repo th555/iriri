@@ -16,7 +16,8 @@ Definitions
 
 - Dictionary: pieces arranged in a circle. Pieces are taken from here, shrinking the circle.
 - Board: the play area which is initially empty, where players place sequences of pieces connected orthogonally
-- Valid word: a sequence of 2 or more pieces, of any colour, which is present in the dictionary at the moment of play. Both the colour and size of every piece must match. Direction doesn’t matter. For the purpose of matching, the dictionary is considered an infinite loop.
+- Word: a connected row or column of at least 2 pieces of any colour on the board, bounded on both sides by an empty space
+- Valid word: a word which can be matched to a sequence of adjacent pieces in the dictionary at the moment of play. Both the colour and size of every piece must match. Direction doesn’t matter. For the purpose of matching, the dictionary is considered an infinite loop.
 - Hand: a set of 3 pieces from which a player can play words on the board. Hands are public information.
 
 
@@ -36,12 +37,12 @@ A turn consists of two phases: place and take. They are always performed in that
 
 ### Place phase
 
-- Place a word using one or more pieces from your hand, connected (orthogonally) in at least one place to the rest of the pyramids.
-  - All placed pieces must lie on a single horizontal or vertical line.
+- Place one or more pieces from your hand on the board, connected (orthogonally) in at least one place to the rest of the pyramids.
+  - All placed pieces must lie on a single horizontal or vertical line, with no empty spaces between them.
   - Pieces may be placed on both sides of existing pieces, between existing pieces, etc.. as long as they satisfy the above rule.
   - Each word on the play area of which the newly placed pieces are part, both horizontal and vertical, must be a valid word at the time of placement, according to the current dictionary.
 - For each word you formed, score 1 point per piece. Although you may only place pieces of your own colour, you score points for pieces of the opponent’s colour as well. If a piece is part of 2 newly formed words, count it twice.
-- If you can’t place a valid word, you must pass.
+- If you can’t form a valid word, you must pass.
 
 ### Take phase
 
